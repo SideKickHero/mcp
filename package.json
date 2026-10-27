@@ -1,0 +1,35 @@
+{
+  "name": "@sidekickhero/mcp",
+  "version": "0.6.6",
+  "description": "Sidekick Hero for IDE agents. Reads your codebase, drives your dev server, and writes a help center — over stdio.",
+  "bin": {
+    "sidekick-mcp": "./dist/cli.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "commands",
+    ".mcp.json",
+    ".claude-plugin",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "peerDependencies": {
+    "playwright": ">=1.40.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright": {
+      "optional": true
+    }
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://www.sidekickhero.co",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SideKickHero/mcp.git"
+  }
+}

@@ -1,0 +1,28 @@
+Sidekick Hero for IDE agents ("sidekick" plugin, @sidekickhero/mcp)
+
+Copyright (c) 2026 Sidekick Hero. All rights reserved.
+
+This software, including its command definitions, bundled build artefacts and
+documentation (the "Plugin"), is proprietary to Sidekick Hero.
+
+Sidekick Hero grants you a limited, non-exclusive, non-transferable,
+non-sublicensable, revocable license to install and run the Plugin for your own
+internal use, with Claude Code or any other client that speaks the Model
+Context Protocol. Where the Plugin connects to the Sidekick Hero hosted service,
+use of that service is governed by the terms you accepted for it (the
+"Agreement"), and nothing in this notice grants any right to that service.
+
+Except as the Agreement expressly permits, you may not: (a) distribute, publish,
+sublicense, sell, rent or otherwise make the Plugin, or any modified or
+derivative version of it, available to any third party; (b) decompile,
+deobfuscate, disassemble or otherwise attempt to derive the source code of the
+Plugin, except to the extent applicable law expressly permits this despite this
+restriction; (c) use the Plugin, or any part of it, to develop or operate a
+competing product or service; or (d) remove or obscure this notice or any
+proprietary marking in the Plugin.
+
+EXCEPT AS EXPRESSLY PROVIDED IN AN APPLICABLE AGREEMENT, AND TO THE MAXIMUM
+EXTENT PERMITTED BY LAW, THE PLUGIN IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT, AND SIDEKICK HERO WILL
+HAVE NO LIABILITY ARISING FROM THE PLUGIN OR ITS USE.

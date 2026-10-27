@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "sidekickhero",
+  "description": "Sidekick Hero's tools for turning a codebase into a help center.",
+  "owner": {
+    "name": "Sidekick Hero",
+    "email": "support@sidekickhero.co"
+  },
+  "renames": {
+    "sidekick": "sidekickhero"
+  },
+  "plugins": [
+    {
+      "name": "sidekickhero",
+      "source": "./",
+      "description": "Reads your codebase and builds a help center."
+    }
+  ]
+}
