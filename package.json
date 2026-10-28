@@ -1,6 +1,6 @@
 {
   "name": "@sidekickhero/mcp",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "Sidekick Hero for IDE agents. Reads your codebase, drives your dev server, and writes a help center — over stdio.",
   "bin": {
     "sidekick-mcp": "./dist/cli.js"

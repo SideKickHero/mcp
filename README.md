@@ -1,16 +1,13 @@
-# Sidekick Hero for IDE agents
+# Sidekick Hero — help-center guides from your coding agent
 
-Sidekick Hero turns your running application into a help center. This plugin
-lets the agent in your editor do it: it reads your codebase for the real routes
-and on-screen labels, records flows in a browser window you can watch, and saves
-them as guides in your Sidekick Hero workspace.
+Write and record your help center from inside Claude Code, Codex, Cursor or
+VS Code. The agent reads your codebase for the real routes and on-screen
+labels, records each flow in a browser window you can watch, and saves the
+result as step-by-step guides in your Sidekick Hero workspace — ready to publish
+as a help center or an in-app agent.
 
-```sh
-claude plugin marketplace add SideKickHero/mcp
-claude plugin install sidekickhero@sidekickhero
-```
-
-Then, in the project you want documented:
+Install it in your coding agent first (see [Setup](#setup) below). Then, in the
+project you want documented:
 
 ```
 /sidekickhero:login
@@ -26,17 +23,10 @@ claude plugin marketplace add SideKickHero/mcp
 claude plugin install sidekickhero@sidekickhero
 ```
 
-### Other editors: clone it once
+### Other editors
 
-There is nothing to compile or install — clone the repository and point your
-editor at `dist/cli.js`:
-
-```sh
-git clone https://github.com/SideKickHero/mcp.git ~/.sidekick-mcp
-```
-
-`git -C ~/.sidekick-mcp pull` updates it. The paths below are absolute on
-purpose: none of these config files expand `~`.
+Point your editor at the npm package. `@latest` makes it start the newest
+release each time the editor launches it.
 
 **Cursor** — `.cursor/mcp.json` in the project, or `~/.cursor/mcp.json` for
 every project:
@@ -45,8 +35,8 @@ every project:
 {
   "mcpServers": {
     "sidekick": {
-      "command": "node",
-      "args": ["/Users/you/.sidekick-mcp/dist/cli.js"]
+      "command": "npx",
+      "args": ["-y", "@sidekickhero/mcp@latest"]
     }
   }
 }
@@ -59,8 +49,8 @@ every project:
   "servers": {
     "sidekick": {
       "type": "stdio",
-      "command": "node",
-      "args": ["/Users/you/.sidekick-mcp/dist/cli.js"]
+      "command": "npx",
+      "args": ["-y", "@sidekickhero/mcp@latest"]
     }
   }
 }
@@ -70,14 +60,15 @@ every project:
 
 ```toml
 [mcp_servers.sidekick]
-command = "node"
-args = ["/Users/you/.sidekick-mcp/dist/cli.js"]
+command = "npx"
+args = ["-y", "@sidekickhero/mcp@latest"]
+tool_timeout_sec = 600
 ```
 
-> **No tools and no error?** Almost always `node` not being on PATH — an editor
+> **No tools and no error?** Almost always `npx` not being on PATH — an editor
 > launched from the Dock or Spotlight does not read your shell profile, and a
-> version manager puts `node` there. Use the absolute interpreter path, which
-> `which node` prints.
+> version manager puts `npx` there. Use the absolute path, which `which npx`
+> prints.
 
 ## Requirements
 
