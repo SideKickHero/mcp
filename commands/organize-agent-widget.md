@@ -1,6 +1,6 @@
 ---
 description: Organize the agent widget's flows into categories with AI
-argument-hint: "[--apply]"
+argument-hint: "[--apply] [context…]"
 ---
 
 Call `sidekick_prompt` with `name: "organize-agent-widget"` and follow what it

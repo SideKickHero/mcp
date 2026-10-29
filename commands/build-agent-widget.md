@@ -1,6 +1,6 @@
 ---
 description: Build the agent and add its widget to the app's layout
-argument-hint: "[--apply] [--no-organize] [--welcome-guide|--no-welcome-guide] [--language <code>]"
+argument-hint: "[--apply] [--no-organize] [--context \"<how to group>\"] [--welcome-guide|--no-welcome-guide] [--language <code>]"
 ---
 
 Call `sidekick_prompt` with `name: "build-agent-widget"` and follow what it

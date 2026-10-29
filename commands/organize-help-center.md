@@ -1,6 +1,6 @@
 ---
 description: Organize the help center's flows into categories with AI
-argument-hint: "[--force] [--apply]"
+argument-hint: "[--force] [--apply] [context…]"
 ---
 
 Call `sidekick_prompt` with `name: "organize-help-center"` and follow what it

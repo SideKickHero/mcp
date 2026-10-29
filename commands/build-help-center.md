@@ -1,6 +1,6 @@
 ---
 description: Build the help center — publish the workspace's flows so it goes live
-argument-hint: "[--all] [--style <pack>] [--no-organize] [--welcome-guide|--no-welcome-guide] [--language <code>]"
+argument-hint: "[--all] [--style <pack>] [--no-organize] [--context \"<how to group>\"] [--welcome-guide|--no-welcome-guide] [--language <code>]"
 ---
 
 Call `sidekick_prompt` with `name: "build-help-center"` — plus `style: "<pack>"` if the user

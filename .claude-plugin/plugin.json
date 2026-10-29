@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "sidekickhero",
-  "version": "0.6.9",
+  "version": "0.7.0",
   "description": "Turns a codebase into a help center. Reads routes, real UI labels and tested behaviours from source; drives the running app in a browser to record flows.",
   "displayName": "Sidekick Hero",
   "author": {

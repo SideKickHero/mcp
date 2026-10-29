@@ -103,10 +103,10 @@ from the plugin you have installed, so it is always right for your version.
 | `features` | `[name]` | account | Write the "Key Features" guide for this application |
 | `import` | `<file\|folder\|url>` | account | Import a markdown file, a folder of them, or a web page as guides |
 | `welcome-guide` | `[faq\|bot]` | account | Generate the Help Center's Welcome guide |
-| `build-help-center` | `[--all] [--style <pack>] [--no-organize] [--welcome-guide\|--no-welcome-guide]` | account | Publish the workspace's flows so the help center goes live |
-| `organize-help-center` | `[--force] [--apply]` | account | Organize the help center's flows into categories with AI |
-| `build-agent-widget` | `[--apply] [--no-organize] [--welcome-guide\|--no-welcome-guide]` | account | Build the agent and add its widget to the app's layout |
-| `organize-agent-widget` | `[--apply]` | account | Organize the agent widget's flows into categories with AI |
+| `build-help-center` | `[--all] [--style <pack>] [--no-organize] [--context "<how to group>"] [--welcome-guide\|--no-welcome-guide]` | account | Publish the workspace's flows so the help center goes live |
+| `organize-help-center` | `[--force] [--apply] [context…]` | account | Organize the help center's flows into categories with AI |
+| `build-agent-widget` | `[--apply] [--no-organize] [--context "<how to group>"] [--welcome-guide\|--no-welcome-guide]` | account | Build the agent and add its widget to the app's layout |
+| `organize-agent-widget` | `[--apply] [context…]` | account | Organize the agent widget's flows into categories with AI |
 | `redo-enhance-images` | `<flow-id>\|--all [--keep-style]` | account | Redraw the placeholders on saved flows with the workspace's current style |
 | `backoffice` | `[flows\|help-center\|agent\|home]` | account | Open the Sidekick backoffice (dashboard) in the browser |
 | `workspaces` | — | account | List the workspaces on your Sidekick account |
