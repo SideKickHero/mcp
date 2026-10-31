@@ -1,6 +1,6 @@
 ---
 description: Set how much of each screen is masked in recorded flows
-argument-hint: "[original|highlight|focus]"
+argument-hint: "[original|highlight|focus|workspace]"
 ---
 
 Call `sidekick_prompt` with `name: "focus-level"` and follow what it

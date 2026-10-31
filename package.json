@@ -1,6 +1,6 @@
 {
   "name": "@sidekickhero/mcp",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Sidekick Hero for IDE agents. Reads your codebase, drives your dev server, and writes a help center — over stdio.",
   "bin": {
     "sidekick-mcp": "dist/cli.js"
@@ -19,7 +19,7 @@
     "THIRD_PARTY_NOTICES.md"
   ],
   "peerDependencies": {
-    "playwright": ">=1.40.0"
+    "playwright": ">=1.41.0"
   },
   "peerDependenciesMeta": {
     "playwright": {
