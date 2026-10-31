@@ -34,7 +34,7 @@ every project:
 ```json
 {
   "mcpServers": {
-    "sidekick": {
+    "sidekickhero": {
       "command": "npx",
       "args": ["-y", "@sidekickhero/mcp@latest"]
     }
@@ -47,7 +47,7 @@ every project:
 ```json
 {
   "servers": {
-    "sidekick": {
+    "sidekickhero": {
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "@sidekickhero/mcp@latest"]
@@ -59,7 +59,7 @@ every project:
 **Codex** — `~/.codex/config.toml`:
 
 ```toml
-[mcp_servers.sidekick]
+[mcp_servers.sidekickhero]
 command = "npx"
 args = ["-y", "@sidekickhero/mcp@latest"]
 tool_timeout_sec = 600
