@@ -129,6 +129,7 @@ from the plugin you have installed, so it is always right for your version.
 | `--window <width>x<height>` | Browser window size; every screenshot is taken at that size |
 | `--mobile [device]` | Record the app as a phone shows it (default iPhone 15) |
 | `--user-agent "<ua>"` | Send this user agent instead of the device's own |
+| `--headless` | Run the browser without a window — it still opens one if the app needs a login (`explore`) |
 | `--safety read-only\|safe-forms\|full-auto` | What the agent may do in the app, for this run |
 | `--style <pack>` | The writing style for this run's captions |
 | `--voice-over [voice]` | Narrate each saved guide — spends AI credits |

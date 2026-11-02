@@ -1,6 +1,6 @@
 ---
 description: Open the app in a browser and learn how it works
-argument-hint: "<url>  [--window <width>x<height>] [--mobile [device]] [--user-agent \"<ua>\"] [--safety read-only|safe-forms|full-auto] [--style <pack>] [--voice-over [voice]] [--no-memory] [--no-welcome-guide] [--ignore-code]"
+argument-hint: "<url>  [--window <width>x<height>] [--mobile [device]] [--user-agent \"<ua>\"] [--headless] [--safety read-only|safe-forms|full-auto] [--style <pack>] [--voice-over [voice]] [--no-memory] [--no-welcome-guide] [--ignore-code]"
 ---
 
 This drives a browser: a window opens and the user signs in themselves.
