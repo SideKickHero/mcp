@@ -1,6 +1,6 @@
 ---
 description: Switch to another Sidekick workspace
-argument-hint: "<workspace-id-or-name>"
+argument-hint: "[workspace-id-or-name]"
 ---
 
 Call `sidekick_prompt` with `name: "use-workspace"` and follow what it

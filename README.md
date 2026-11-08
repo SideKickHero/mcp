@@ -137,18 +137,6 @@ from the plugin you have installed, so it is always right for your version.
 | `--no-welcome-guide` | Skip the Welcome guide at the end (`explore`) |
 | `--ignore-code` | Explore from the browser alone, without reading the source (`explore`) |
 
-### When an identity provider blocks the browser
-
-Google and some other providers refuse sign-in from an automated browser ("this
-browser or app may not be secure"). Attach Sidekick to your own Chrome instead:
-
-```sh
-google-chrome --remote-debugging-port=9222 --user-data-dir=/tmp/sk-chrome
-```
-
-Sign in to the app in that window, set `SIDEKICK_CDP_URL=http://localhost:9222`
-and run the command again. Sidekick drives that session and never closes it.
-
 ## Tools
 
 The commands are what you type. These are the tools behind them, which the
@@ -223,8 +211,51 @@ making it.
 |---|---|
 | `SIDEKICK_SERVER_URL` | Your Sidekick server, for a self-hosted install (default `https://api.sidekickhero.co`) |
 | `SIDEKICK_APP_URL` | Your Sidekick web app, for a self-hosted install (default `https://app.sidekickhero.co`) |
-| `SIDEKICK_CDP_URL` | Drive your own Chrome instead of launching one (see above) |
+| `SIDEKICK_CDP_URL` | Drive your own Chrome instead of launching one (see [Troubleshooting](#troubleshooting)) |
 | `SIDEKICK_MCP_TELEMETRY` | `0` or `1`: decide problem reports for every machine |
+
+## Troubleshooting
+
+### When Claude Code blocks a browser step
+
+In auto mode, Claude Code's safety check can deny a click or a typed value in
+the recorded app, sometimes without giving a reason. The recording stops at
+that step, because every flow needs the browser. To let Sidekick drive the
+browser without asking, while every other tool still asks, add the browser
+tools to `permissions.allow` in `~/.claude/settings.json` (or the project's
+`.claude/settings.local.json`):
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_sidekickhero_sidekick__browser_open",
+      "mcp__plugin_sidekickhero_sidekick__browser_snapshot",
+      "mcp__plugin_sidekickhero_sidekick__browser_act",
+      "mcp__plugin_sidekickhero_sidekick__browser_capture",
+      "mcp__plugin_sidekickhero_sidekick__browser_await_login",
+      "mcp__plugin_sidekickhero_sidekick__browser_crawl",
+      "mcp__plugin_sidekickhero_sidekick__browser_close",
+      "mcp__plugin_sidekickhero_sidekick__browser_setup"
+    ]
+  }
+}
+```
+
+`/permissions` in Claude Code adds them too. Then tell the agent to continue.
+To approve each step yourself instead, leave auto mode.
+
+### When an identity provider blocks the browser
+
+Google and some other providers refuse sign-in from an automated browser ("this
+browser or app may not be secure"). Attach Sidekick to your own Chrome instead:
+
+```sh
+google-chrome --remote-debugging-port=9222 --user-data-dir=/tmp/sk-chrome
+```
+
+Sign in to the app in that window, set `SIDEKICK_CDP_URL=http://localhost:9222`
+and run the command again. Sidekick drives that session and never closes it.
 
 ## Licence
 
